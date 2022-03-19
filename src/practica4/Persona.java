@@ -10,7 +10,7 @@ package practica4;
  * @author Juan Llado
  */
 public abstract class Persona {
-    
+
     private Perro perro;
     private Gato gato;
     private String nombre;
@@ -31,7 +31,6 @@ public abstract class Persona {
         return "Persona{" + "nombre=" + nombre + ", DNI=" + DNI + ", edad=" + edad + '}';
     }
 
-    
     public String getNombre() {
         return nombre;
     }
@@ -55,5 +54,13 @@ public abstract class Persona {
     public void setEdad(int edad) {
         this.edad = edad;
     }
-        
+
+    public void setPerro(Perro perro) {
+        this.perro = perro;
+    }
+
+    public Perro getPerro() {
+        return perro;
+    }
+
 }
