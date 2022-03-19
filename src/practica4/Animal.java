@@ -40,8 +40,17 @@ public abstract class Animal implements NewInterface {
     }
 
     @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Animal) {
+            return this.nombre == ((Animal) obj).getNombre();
+        } else {
+            return false;
+        }
+    }
+
+    @Override
     public String toString() {
         return "Mascota{" + "nombre=" + nombre + ", edad=" + edad + '}';
-    } 
-    
+    }
+
 }
