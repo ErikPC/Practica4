@@ -12,8 +12,8 @@ import Interfaz.Adulto;
  * @author Juan Llado
  */
 public class Perro extends Animal {
-    
-    private Adulto dueño;
+
+    private Adulto amo;
     private String raza;
 
     public Perro(String raza, String nombre, int edad) {
@@ -31,15 +31,10 @@ public class Perro extends Animal {
     public void setRaza(String raza) {
         this.raza = raza;
     }
-    
+
     @Override
     public void sonido() {
         System.out.println(this.getNombre() + " hace guau");
     }
 
-   
-
-
-    
-    
 }
