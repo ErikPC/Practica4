@@ -1,98 +1,66 @@
 # Práctica 4
+Practica realizada por [Samuele Tonarini](https://www.github.com/stonarini) y [Erik Pardillo](https://www.github.com/ErikPC). 
 
-## Objetivos
+## Sube la Práctica3 a github como primera versión en la rama master.
+![1](img/1.png)  
+Aqui podemos ver como ponemos el tag 1.0.0 al ultimo commit, iniciando asi el versionado semantico.
 
-- Refactoring
-- Git y github
-- Versionado semántico
-- Markdown
+## Crea una rama nueva para desarrollo, y actualiza la versión.
+Creamos y nos posicionamos en la branch develop:
+```
+$ git branch develop
+$ git checkout develop
+```
 
-## Pasos
+## Realiza 2 refactorizaciones.
+![3](img/3.png)  
+Como primer cambio ponemos getter y setter a la clase Persona para el Perro.
 
-1.	Sube la Práctica3 a github como primera versión en la rama master.
-2.	Crea una rama nueva para desarrollo, y actualiza la versión.
-3.	Realiza 2 refactorizaciones.
-4.	Actualiza la rama master con la nueva versión estable.
-5.	Realiza 2 refactorizaciones más en la rama de desarrollo desde la versión anterior.
-6.	Sube a máster lo anterior y actualiza la versión.
+![4](img/4.png)  
+![5](img/5.png)  
+Hacemos un *git add*, *commit* y luego un *tag* para actualizar la version.
 
-## Criterios 
+![6](img/6.png)  
+Como segundo cambio haremos un override del metodo equals de Animal.
 
-- Realiza el control de versiones con versionado semántico.
--	Aplica comentarios en formato JavaDoc.
--	Utiliza Markdown para explicar lo que has hecho en la práctica.
+![7](img/7.png)  
+Repetimos el *add-commit-tag*.
 
-## Comandos útiles
+## Actualiza la rama master con la nueva versión estable.
+![8](img/8.png)  
+Ahora nos movemos a la branch main y mergeamos la develop. La opcion *--no-ff* sirve para mantener la relacion de las dos branchs, para ver que commits se hicieron en la main y cuales se mergearon.
 
-Añadir todos los archivos para hacer el futuro commit
-~~~
-git add .
-~~~
+## Realiza 2 refactorizaciones más en la rama de desarrollo desde la versión anterior.
+Despues de hacer un *git push* desde un ordenador, haremos un pull desde el otro para conseguir los cambios.
 
-Hacer commit
-~~~
-git commit -m "Poner descripción del commit"
-~~~
+![9](img/9.png)  
+Despues intoducimos otro cambio, en este caso un refactoring del nombre del atributo *dueno* de la clase Perro.
 
-Subir a github
-~~~
-git remote add origin URLdeTuProyectoEnGithub
-git push origin main
-~~~
+![10](img/10.png)
+Ahora hacemos el add-commit-tag otra vez, pero esta vez actualizaremos solo el "PATCH" de la version ya que fue un cambio muy menor.
 
-Descargar de github a local
-~~~
-git pull URLdeTuProyectoEnGithub
-~~~
+![11](img/11.png)  
+Ahora introducimos un cambio que rompe la interfaz de Gato, cambiando el constructor.
 
-Ver commits
-~~~
-git log --oneline
-~~~
+![12](img/12.png)  
+Volvemos a comitear los cambios, esta vez cambiando la version "MAYOR" ya que hemos roto la interfaz.
 
-Poner tag (v1.0.0) a un commit anterior en concreto 
-~~~
-git tag -a v1.0.0 -m "Inicializacion proyecto" ee9c6ae
-~~~
+## Sube a máster lo anterior y actualiza la versión.
+![13](img/13.png)  
+Ahora nos cambiamos a main y mergeamos la branch develop.
 
-Ver ramificaciones
-~~~
-git branch
-~~~
+## Aplica comentarios en formato JavaDoc.
+![14](img/14.png)  
+Anadimos comentarios JavaDoc al getter y setter que hemos introducido a la clase de Persona.
 
-Crear ramificación
-~~~
-git branch nuevaRamificación
-~~~
+![15](img/15.png)  
+Comiteamos el cambio pero no le asignamos ningun tag.
 
-Moverse a nuevaRamificación
-~~~
-git checkout nuevaRamificacion
-~~~
+![16](img/16.png)  
+Tambien anadimos JavaDoc al otro metodo que hemos introducido, el equal de Animal.
 
-Subir nuevaRamificación a github
-~~~
-git push origin nuevaRamificacion
-~~~
+![17](img/17.png)  
+Ahora si que al comitear, le asignamos un tag.
 
-Fusionar ramificación actual con una subrama
-~~~
-git merge nuevaRamificacion
-~~~
-
-
-## Recursos
-
-[Instalar git](https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Instalaci%C3%B3n-de-Git)
-
-[Markdown](https://markdown.es/)
-
-[Curso git/Github](https://www.youtube.com/watch?v=w2o_rH4b5tA&list=PLU8oAlHdN5BlyaPFiNQcV0xDqy0eR35aU&index=6)
-
-[Tags en git](https://juncotic.com/tag-en-git/)
-
-[Versionado semántico](https://semver.org/lang/es/)
-
-[Tutorial versionado](https://www.youtube.com/watch?v=1B9iP611WUY&list=PLY1J8ju7Eq-TUBGmySQNivh2F1Yq0CgQj&index=18)
-
-[GitFlow](https://www.youtube.com/watch?v=atYIzPIeeQk&list=PLY1J8ju7Eq-TUBGmySQNivh2F1Yq0CgQj&index=19)
+## Utiliza Markdown para explicar lo que has hecho en la práctica.
+Por ultimo hemos desarrollado este README, disponible en [repositorio](https://www.github.com/ErikPC/Practica4) respectivo de esta practica.
