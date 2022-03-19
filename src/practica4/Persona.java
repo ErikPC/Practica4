@@ -55,10 +55,18 @@ public abstract class Persona {
         this.edad = edad;
     }
 
+    /**
+     * 
+     * @param perro
+     */
     public void setPerro(Perro perro) {
         this.perro = perro;
     }
 
+    /**
+     * 
+     * @return perro
+     */
     public Perro getPerro() {
         return perro;
     }
