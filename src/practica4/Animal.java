@@ -39,6 +39,11 @@ public abstract class Animal implements NewInterface {
         this.edad = edad;
     }
 
+    /**
+     * 
+     * @param obj objeto para comparar
+     *            compara animales basandose en su nombre
+     */
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof Animal) {
