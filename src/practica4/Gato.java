@@ -10,13 +10,14 @@ import Interfaz.Adulto;
  * @author Juan Llado
  */
 public class Gato extends Animal {
-    
+
     private String color;
     private Adulto dueño;
 
-    public Gato(String color, String nombre, int edad) {
+    public Gato(String color, String nombre, int edad, Adulto dueño) {
         super(nombre, edad);
         this.color = color;
+        this.dueño = dueño;
     }
 
     public Gato() {
@@ -42,13 +43,13 @@ public class Gato extends Animal {
     public String toString() {
         return "Gato{" + "color=" + color + '}';
     }
-    
+
     /**
      * 
      */
     @Override
-    public void sonido(){
+    public void sonido() {
         System.out.println(this.getNombre() + " dice miau");
-    }  
-   
+    }
+
 }
